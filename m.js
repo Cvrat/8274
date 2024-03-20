@@ -83,3 +83,56 @@ function secondTask() {
 secondTask()
 //vipolneno
 console.log(45);
+// primenene callback a 
+function uti(g,k){
+    console.log('g');
+    k();                      // callback 
+}
+function yti(){
+    console.log('dadasd');
+    setTimeout(function(){
+        console.log('312');
+    },10000)
+};
+uti('dshadjsa' , yti);
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+function getTimeFromMinutes(argu) {
+    if (typeof(argu) !== 'number' || argu < 0 || !Number.isInteger(argu)) {
+        return "Ошибка, проверьте данные";
+    }
+    let a = argu / 60 ; 
+    a  = Math.floor(a);
+    let b = argu % 60 ;
+    let aStr = '';
+    switch (a) {
+        case 0: 
+            aStr = 'часов';
+            break;
+        case 1:
+            aStr = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            aStr = 'часа';
+            break;
+        default:
+            aStr = 'часов';
+    }
+    
+    return `Это ${a} ${aStr} и ${b} минут`;
+}
+console.log(getTimeFromMinutes());
+function findMaxNumber(a , b , c , d ) {
+    if(typeof(a) !=  'number' ||
+       typeof(b) !=  'number' ||
+       typeof(c) !=  'number' ||
+       typeof(d) !=  'number' ){
+        return 0 ;
+    }else{
+        return Math.max(a, b ,c, d);
+        
+    }
+
+}
+console.log(findMaxNumber(1 , 15, 17 , 19 ))
