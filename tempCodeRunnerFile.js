@@ -1,13 +1,22 @@
-function findMaxNumber(a , b , c , d ) {
-    if(typeof(a) !=  'number' ||
-       typeof(b) !=  'number' ||
-       typeof(c) !=  'number' ||
-       typeof(d) !=  'number' ){
-        return 0 ;
-    }else{
-        return Math.max(a, b ,c, d);
-        
+const  po = {
+    a: 1234,
+    b: 'dajdaks',
+    c:{
+        colors:'FF00FF',
+        bg:'000000',
+        fmcolor:'00FF254',
     }
-
-}
-console.log(findMaxNumber(1 , 15, 17 , 19 ))
+                                               //sabah otmetka qoyacam YADDIN CIXMASIN!!!
+};
+console.log(po.c , po.a  , po.b);
+console.log(po['c']['colors'])
+//delete po.b;
+console.log(po);
+for (let key in po){
+    if(typeof(po[key] === 'object')){
+     for(let i in po[key]){
+        console.log(`DoGa ${po.key} gosterir ${po[key][i]} `)
+     }
+    }else{
+        console.log(`DoGa ${key} gosterir ${po[key]} `);
+    }
