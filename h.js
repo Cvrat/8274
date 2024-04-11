@@ -125,6 +125,7 @@ if(personalmovieDB.count < 10){
 
 console.log(personalmovieDB);
 console.log(23);
-const yup = prompt('djasakd' ,  ' ');
-yup.sort();
-console.log(yup.join('/   '));
+const plo = prompt('', ' ');
+const y = str.split(plo);
+y.sort()
+console.log(y.join('  ;   '))
