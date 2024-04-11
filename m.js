@@ -171,3 +171,104 @@ for (let key in po){
 console.log(c);
 console.log(Object.keys(po));
 //////////////////////////////////////////////////////////////////////
+const plo = prompt('', ' ');
+const y = str.split(plo);
+y.sort()
+console.log(y.join('  ;   '))
+
+const Kjii = [2,4,5,6,7,8,10,15];
+Kjii.sort(fahf);
+console.log(Kjii);
+function    fahf(a,b){
+    return a+ b ; 
+}
+
+const huii = {
+    a:10,
+    b:90,
+}
+const okil = huii ;
+huii.a = 15;
+console.log(huii)
+const obju = {
+    a:5,
+    b:7,
+};
+
+//const copy = obju;
+//copy.a = 10;
+//console.log(copy);
+function copy(mainObj){
+    let Objcopy = {};
+    let key;
+    for(key in mainObj){
+        Objcopy[key] = mainObj[key];
+        //return mainObj;
+    }    
+    return mainObj;
+}
+
+const numbers = {
+    a:2,
+    b:1,
+    c:{
+        m:13,
+        n:471
+    }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 11 ;
+console.log(newNumbers);
+const add =  {
+    j:18,
+    s : 19,
+}
+
+console.log(Object.assign(numbers , add));
+console.log(Object.assign({} , add , numbers));
+///////////////////////////////////////////
+const oldArray = ['a' , 'b' , 'c'];
+const newArray = oldArray.slice();
+newArray[1] = 'qelyan';
+console.log(newArray);
+console.log(oldArray);
+//////////////////////////////////////////////////////////////
+const video = ['https://www.youtube.com'],
+      blogs = ['wordpress' , 'live'],
+      internet = [...video  , ...blogs  , 'vk '];     //operator spread dobavlyaet elementi massimov 
+
+console.log(internet);
+function log(a , b, c ){  
+    console.log(a) ;
+    console.log(b);
+    console.log(c);
+    
+
+}
+const num = [ 2 , 5, 8, 9, 10 ];
+log(...num);
+///////////////////////////////////////////////////////
+///OOP nasledovanie 
+let str = 'some ';
+let strOvj = new String(str);
+console.log(str);
+console.log(strOvj);
+
+const soldier = {
+    health :400 , 
+    armor : 100 ,
+    h: function(){
+        console.log('k');
+    }
+};
+const jonh = Object.create(soldier);
+//const jonh = {
+    //halth :100 
+//}
+
+//jonh.__proto__ = soldier           ///ustarevwiy format 
+Object.setPrototypeOf( jonh , soldier );
+console.log(jonh.armor)
+jonh.h();
+//////////////////////////////////////////////////////////////////////
